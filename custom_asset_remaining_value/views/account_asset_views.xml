@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_asset_form_inherit_strict_degressive" model="ir.ui.view">
+        <field name="name">account.asset.form.strict.degressive</field>
+        <field name="model">account.asset</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='method_progress_factor']" position="attributes">
+                <attribute name="required">method in ('degressive', 'degressive_then_linear', 'strict_degressive')</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
